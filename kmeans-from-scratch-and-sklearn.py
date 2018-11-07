@@ -16,6 +16,7 @@ f1 = data['V1'].values
 f2 = data['V2'].values
 X = np.array(list(zip(f1, f2)))
 plt.scatter(f1, f2, c='black', s=7)
+plt.show()
 
 # Euclidean Distance Caculator
 def dist(a, b, ax=1):
@@ -23,6 +24,7 @@ def dist(a, b, ax=1):
 
 # Number of clusters
 k = 3
+
 # X coordinates of random centroids
 C_x = np.random.randint(0, np.max(X)-20, size=k)
 # Y coordinates of random centroids
@@ -34,6 +36,7 @@ print(C)
 # Plotting along with the Centroids
 plt.scatter(f1, f2, c='#050505', s=7)
 plt.scatter(C_x, C_y, marker='*', s=200, c='g')
+plt.show()
 
 # To store the value of centroids when it updates
 C_old = np.zeros(C.shape)
@@ -63,7 +66,7 @@ for i in range(k):
         ax.scatter(points[:, 0], points[:, 1], s=7, c=colors[i])
 ax.scatter(C[:, 0], C[:, 1], marker='*', s=200, c='#050505')
 
-
+plt.show()
 
 '''
 ==========================================================
